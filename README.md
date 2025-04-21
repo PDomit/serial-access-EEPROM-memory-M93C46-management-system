@@ -31,4 +31,4 @@ int main(void)
 }
 ```
 The screenshot below shows terminal with all of the operatins executed.
-![Opis alternatywny](Memory_Putty.png)
+![Opis alternatywny](images/Memory_Putty.png)
