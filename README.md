@@ -33,11 +33,17 @@ To get started you have to firstly connect the board to PC, then open a terminal
 described avaible codes to controll the memory.
 ```
 The screenshot below shows terminal with all of the operatins executed.
+
 ![Opis alternatywny](images/Memory_Putty.png)
+
 While opening PuTTy it is good to properly set some options. The screenshot below shows some settings. First you have to set connection type - serial, then select a COM port (you can check which COM is connected with the bord in device manager) and finally set speed to 9600.
+
 ![Opis alternatywny](images/Putty_tip_1.png)
+
 In the Terminal cart select Implict CR in every LF, Local echo - Force on, Local line editing - Force on as shown below.
+
 ![Opis alternatywny](images/Putty_tip_2.png)
+
 Currently it is possible to change clock frequency or memory bytes by changing values in EEPROM_M93C46.h file. 
 ```c
 #define USART_BRR 0xD05 // 9600 BAUD FOR 32MHz CLOCK
