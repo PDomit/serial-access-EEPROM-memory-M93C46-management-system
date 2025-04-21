@@ -3,10 +3,10 @@
 ## 📌Overview
 This repository is a C language code file for STM32 board. EEPROM_M93C46.c file contains functions which enables managing serial EEPROM memory chip M93C46 with MICROWIRE™ standard connected to a board. A memory chip is managed by special codes sending to the STM32 board from a PC via serial termianl (eg. PuTTy). There is also the necessary configuration of USART. It is possible to manage more than one memory chip. The file will work with Nucleo F334R8 board, or any board with similar peripherials.
 
-## Why it is useful ?
+## 📌Why it is useful ?
 It can be used for managing any single memory chip. Thanks to this you can for eg. read content from a desoldered memory chip.
 
-## Getting started 
+## 📌Getting started 
 You need any Nucleo F334R8 board (in the future it will be extended to any STM32 board). You can also use boards similar to F334R8. You also need a PC with serial terminal (eg. PuTTy).
 Next ou have to connect somehow a memory chip to a board. Below is shown typical usage in the main function.
 ```c
@@ -50,6 +50,9 @@ Currently it is possible to change clock frequency or memory bytes by changing v
 #define MemoryBytes 128 // NUMBER OF BYTES IN THE MEMORY
 ```
 It is also possible to chenge word length from x8 to x16 but if this parameter changes it will be necessary to change frames of data sending to the memory while performing writting or reading operations.
+
+## 📌Future
+In the future I am going to enable manageing different memories by adding option to change the frames of data. I am also going to make the file suitable to projects with many different Nucleo boards.
 
 
 
