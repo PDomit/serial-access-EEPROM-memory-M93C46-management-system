@@ -1,7 +1,7 @@
 # serial-access-EEPROM-memory-management-system
 
 ## 📌Overview
-This project is a C language code file for STM32 board. The file contains functions which enables managing serial EEPROM memory chip M93C46 with MICROWIRE™ standard connected to a board. A memory chip is managed by special codes sending to the STM32 board from a PC via serial termianl (eg. PuTTy). There is also the necessary configuration of USART. It is possible to manage more than one memory chip.
+This repository is a C language code file for STM32 board. EEPROM_M93C46.c file contains functions which enables managing serial EEPROM memory chip M93C46 with MICROWIRE™ standard connected to a board. A memory chip is managed by special codes sending to the STM32 board from a PC via serial termianl (eg. PuTTy). There is also the necessary configuration of USART. It is possible to manage more than one memory chip. The file will work with Nucleo F334R8 board, or any board with similar peripherials.
 
 ## Why it is useful ?
 It can be used for managing any single memory chip. Thanks to this you can for eg. read content from a desoldered memory chip.
@@ -29,6 +29,17 @@ int main(void)
     // WAIT
 	}
 }
-```
-The screenshot below shows terminal with all of the operatins executed.
+To get started you have to firstly connect the board to PC, then open a terminal and then reset the board. The entry text will be shown on the terminal's window. There are
+described avaible codes to controll the memory.
+```The screenshot below shows terminal with all of the operatins executed.
 ![Opis alternatywny](images/Memory_Putty.png)
+While opening PuTTy it is good to 
+Currently it is possible to change clock frequency or memory bytes by changing values in EEPROM_M93C46.h file. 
+```
+#define USART_BRR 0xD05 // 9600 BAUD FOR 32MHz CLOCK
+#define MemoryBytes 128 // NUMBER OF BYTES IN THE MEMORY
+```
+It is also possible to chenge word length from x8 to x16 but if this parameter changes it will be necessary to change frames of data sending to the memory while performing writting or reading operations.
+
+
+
