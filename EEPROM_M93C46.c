@@ -1,7 +1,7 @@
 #include <EEPROM_M93C46.h>
 
 
-char receivedDataUART[MemoryBytes]; // TABLE TO CONTAING RECEIVING DATA
+char receivedDataUART[MemoryBytes]; // TABLE TO CONTAING RECEIVING DATA 
 char sentDataUART; // VARIABLE TO CONTAIN SENDING DATA
 const char *entryText = "WELCOME ON THE BOARD !\nTELL ME WHAT TO DO:\nWR###...\nRD###...\nER\nWA#\nLEGEND:\nWR - WRITE DATA\nRD - READ DATA\nER - ERASE ALL DATA\nWA - WRITE ALL DATA\n# - BYTE OF DATA\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n"; // ENTRY TEXT
 
@@ -389,3 +389,4 @@ void USART2_IRQHandler(void){
 	i++; // INCREMENTING VARIABLE
 
 }
+
